@@ -44,7 +44,7 @@ async def start(_, message):
 
 I can download vimeo video links and upload to Telegram 💥
 Send me a vimeo video link to start download 🚿""",
-       reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Source Code 💻", url="https://github.com/ImJanindu/Vimeo-Bot")]]))
+       reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("💻 Update Channel 💻", url="https://t.me/FZBOTS")]]))
 
 # vimeo download
 @bot.on_message(filters.regex(pattern="https://vimeo.com/") & filters.private)
@@ -59,7 +59,7 @@ async def vimeo(_, message):
                         filename="vimeo.mp4")
         file = "./vimeo.mp4"
         await msg.edit("📤 `Uploading...`")
-        cap = f"✨ `Uploaded By:` {user} \n💻 `Bot By:` @Infinity_Bots"    
+        cap = f"✨ `Uploaded By:` {user} \n💻 `Bot By:` @FZBOTS"    
         await bot.send_video(message.chat.id, video=file, caption=cap)
         await msg.delete()
         os.remove(file)

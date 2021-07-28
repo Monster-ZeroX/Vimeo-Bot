@@ -17,7 +17,7 @@
     },
     "addons": [],
     "buildpacks": [
-        {"url": "heroku/python"}
+        {"url": "railway/python"}
     ],
     "formation": {
         "worker": {
